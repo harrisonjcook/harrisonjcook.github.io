@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 2em;
+    height: 100%;
+    width: 100%;
+    user-select: none;
+    text-wrap: nowrap;
+    z-index: 10;
+    position: absolute;
+}
+
+.hero h1 {
+    font-size: calc(50px + 2vw);
+    line-height: 1em;
+    width: 100%;
+}
+
+.hero .wrap {
+    width: 100%;
+}
+
+/* TRIANGLES*/
+
+@keyframes infinite-scroll {
+    from {
+      transform: rotate(15deg) translateX(0px);
+    }
+  
+    to {
+      transform: rotate(15deg) translateX(-100px);
+    }
+  }
+
+.triangles {
+    position: fixed;
+    overflow: hidden;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 400%;
+    background: url('Untitled.svg');
+    background-size: 100px;
+    opacity: .075;
+    animation: 8s infinite infinite-scroll;
+     animation-timing-function: linear;
+}
+
+/* Vignette Background */
+
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgb(0, 87, 49),
+                rgb(0,0,0));
+    z-index: -1;
+}
+
+/* SECTIONS*/
+
+section {
+    color: white;
+    padding: 20px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.inner {
+    max-width: 1000px;
+    margin: auto;
+    
+    min-width: 75vw;
+}
+
+.pad {
+    padding-top: 75vh;
+}
+
+/* LEADERBOARD */
+
+.leaderboard {
+    position: relative;
+    bottom: 50px;
+}
+
+.leaderboard h1{
+    font-style: italic;
+    text-align: center;
+}
+
+table {
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);   
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    
+}
+
+table tr td:nth-child(1) {
+    background-color: transparent;
+    text-align: center;
+}
+
+table tr th {
+    font-size: 30px;
+}
+
+table td:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+table tr p {
+    font-style: italic;
+    font-weight: 800;
+    color: rgba(255, 255, 255, .5);
+}
+
+table tr td {
+    background-color: rgba(25, 25, 25, .15);
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* WEEK ONE */
+
+.w1 h1 {
+    font-style: italic;
+    line-height: 1em;
+    text-align: center;
+}
+
+.w1 h2 {
+    text-align: center;
+    width: 100%;
+    color: rgba(255, 255, 255, .5);
+    font-size: calc(20px + 2vw);
+    line-height: 1.5em;
+
+}
+
+section h1 {
+    font-size: calc(30px + 3vw);
+
+}
+
+.w1 table tr th {
+    color: rgba(255,255,255, .25);
+}
+
+.w1 h3 {
+    position: relative;
+    bottom: 200px;
+    width: 75%;
+    font-size: calc(30px + 2vw);
+    text-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    font-style: italic;
+    line-height: 1em;
+}
+
+.w1 table tr p {
+    font-style: italic;
+    font-weight: 800;
+    color: rgba(255, 255, 255, .25);
+}
