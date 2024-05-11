@@ -4,6 +4,11 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    z-index: inherit;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .hero {
@@ -13,12 +18,10 @@
     justify-content: center;
     text-align: center;
     line-height: 2em;
-    height: 100%;
     width: 100%;
     user-select: none;
     text-wrap: nowrap;
     z-index: 10;
-    position: absolute;
 }
 
 .hero h1 {
@@ -29,6 +32,8 @@
 
 .hero .wrap {
     width: 100%;
+    margin: 100px;
+    margin-bottom: 0;
 }
 
 /* TRIANGLES*/
@@ -44,17 +49,17 @@
   }
 
 .triangles {
-    position: fixed;
-    overflow: hidden;
+    position: absolute;
     top: -100%;
-    left: -100%;
+    left: -50%;
     width: 200%;
-    height: 400%;
+    height: 200%;
     background: url('Untitled.svg');
     background-size: 100px;
     opacity: .075;
     animation: 8s infinite infinite-scroll;
      animation-timing-function: linear;
+     z-index: -1;
 }
 
 /* Vignette Background */
@@ -68,120 +73,155 @@
     background: radial-gradient(rgb(0, 87, 49),
                 rgb(0,0,0));
     z-index: -1;
+    overflow-x: hidden;
 }
 
 /* SECTIONS*/
 
 section {
     color: white;
-    padding: 20px;
     display: flex;
-    
     align-items: center;
     justify-content: center;
 }
 
 .inner {
-    max-width: 1000px;
-    margin: auto;
-    
-    min-width: 75vw;
-}
-
-.pad {
-    padding-top: 75vh;
-}
-
-/* LEADERBOARD */
-
-.leaderboard {
-    position: relative;
-    bottom: 50px;
-}
-
-.leaderboard h1{
-    font-style: italic;
-    text-align: center;
-}
-
-table {
-    border-radius: 15px;
     width: 100%;
-    max-width: 1000px;
-    margin: auto;
-    border-radius: 15px;
-    backdrop-filter: blur(5px);   
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    
-}
-
-table tr td:nth-child(1) {
-    background-color: transparent;
-    text-align: center;
-}
-
-table tr th {
-    font-size: 30px;
-}
-
-table td:hover {
-    background-color: rgba(0, 0, 0, 0.25);
-}
-
-table tr p {
-    font-style: italic;
-    font-weight: 800;
-    color: rgba(255, 255, 255, .5);
-}
-
-table tr td {
-    background-color: rgba(25, 25, 25, .15);
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 /* WEEK ONE */
-
-.w1 h1 {
-    font-style: italic;
-    line-height: 1em;
-    text-align: center;
-}
 
 .w1 h2 {
     text-align: center;
     width: 100%;
     color: rgba(255, 255, 255, .5);
     font-size: calc(20px + 2vw);
-    line-height: 1.5em;
-
+    line-height: 1.25em;
+    font-style: italic;
 }
 
 section h1 {
     font-size: calc(30px + 3vw);
-
 }
 
 .w1 table tr th {
     color: rgba(255,255,255, .25);
 }
 
-.w1 h3 {
-    position: relative;
-    bottom: 200px;
-    width: 75%;
-    font-size: calc(30px + 2vw);
-    text-wrap: wrap;
-    text-align: center;
-    margin: auto;
-    font-style: italic;
-    line-height: 1em;
-}
-
 .w1 table tr p {
     font-style: italic;
     font-weight: 800;
     color: rgba(255, 255, 255, .25);
+}
+
+/* BACKGROUND */
+.content {
+    background-color: rgb(10,10,10);
+}
+
+.content h1 {
+    line-height: 1em;
+    text-align: center;
+    font-size: calc(30px + 4vw);
+}
+
+/* GRADIENT */
+.gradient {
+    height: 100px;
+    width: 100%;
+    z-index: 100;
+    background: rgb(10,10,10);
+    background: linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,1) 100%);
+}
+
+.background {
+    overflow-x: hidden;
+}
+
+/* CHALLENGES */
+
+.challenges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50vh;
+}
+
+.challenges .inner {
+    margin: auto;
+    max-width: 1000px;
+}
+
+.challenges .inner .lists{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.challenges h3 {
+    font-size: calc(20px + 2vw);
+    text-align: center;
+}
+
+.challenges .lists div {
+    width: 50%;
+
+}
+
+.challenges .lists div p {
+    padding: 10px;
+}
+
+.challenges ol {
+    list-style: none;
+    width: 100%;
+}
+
+.challenges p {
+    float: left;
+    text-align: left;
+}
+
+.challenges li {
+    margin: 0 10px 0 10px;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 10px;
+}
+
+.challenges li h3 {
+    margin: 10px;
+    color: rgba(255, 255, 255, .75);
+    font-style: italic;
+    margin-left: auto;
+}
+
+.challenges .l {
+    background: rgb(251,160,51);
+    background: radial-gradient(circle, rgba(251,160,51,1) 0%, rgba(254,93,18,1) 100%);
+}
+
+.challenges .r {
+    background: rgb(32,232,243);
+    color: black;
+    background: radial-gradient(circle, rgba(32,232,243,1) 0%, rgba(5,83,162,1) 100%);
+}
+
+.challenges .c {
+    color: black;
+    background: rgb(209,249,91);
+    background: radial-gradient(circle, rgba(209,249,91,1) 0%, rgba(33,156,20,1) 100%, rgba(254,93,18,1) 100%);
+}
+
+@media screen and (max-width: 500px) {
+    .challenges .inner .lists{
+        display: block;
+       
+    }
+
+    .challenges .lists div {
+        width: 100%;
+    }
 }
