@@ -6,6 +6,7 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
     z-index: inherit;
+    overflow-x: hidden;
 }
 
 body {
@@ -31,12 +32,18 @@ body {
     font-size: calc(50px + 2vw);
     line-height: 1em;
     width: 100%;
+    overflow-y: hidden;
+}
+
+.hero h2 {
+    overflow-y: hidden;
 }
 
 .hero .wrap {
     width: 100%;
     margin: 100px;
     margin-bottom: 0;
+    overflow-x: visible;
 }
 
 /* TRIANGLES*/
@@ -94,7 +101,7 @@ section {
 
 /* WEEK ONE */
 
-.w1 h2 {
+.challenges h2 {
     text-align: center;
     width: 100%;
     color: rgba(255, 255, 255, .5);
@@ -147,12 +154,19 @@ section h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 50vh;
 }
 
 .challenges .inner {
     margin: auto;
     max-width: 1000px;
+}
+
+.inner h1 {
+    overflow-y: hidden;
+}
+
+.inner h2 {
+    overflow-y: hidden;
 }
 
 .challenges .inner .lists{
@@ -199,6 +213,7 @@ section h1 {
     color: rgba(255, 255, 255, .75);
     font-style: italic;
     margin-left: auto;
+    overflow-x: visible;
 }
 
 .challenges .l {
@@ -216,6 +231,17 @@ section h1 {
     color: black;
     background: rgb(209,249,91);
     background: radial-gradient(circle, rgba(209,249,91,1) 0%, rgba(33,156,20,1) 100%, rgba(254,93,18,1) 100%);
+}
+
+.challenges .t {
+    background: rgb(161,161,161);
+    background: radial-gradient(circle, rgba(161,161,161,1) 0%, rgba(91,91,93,1) 100%);
+}
+
+.leaderboard {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 15px solid rgba(100,100,100,.5);
 }
 
 @media screen and (max-width: 500px) {
