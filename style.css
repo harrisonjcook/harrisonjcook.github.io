@@ -48,15 +48,7 @@ body {
 
 /* TRIANGLES*/
 
-@keyframes infinite-scroll {
-    from {
-      transform: rotate(15deg) translateX(0px);
-    }
-  
-    to {
-      transform: rotate(15deg) translateX(-100px);
-    }
-  }
+
 
 .triangles {
     position: absolute;
@@ -67,7 +59,6 @@ body {
     background: url('Untitled.svg');
     background-size: 100px;
     opacity: .075;
-    animation: 8s infinite infinite-scroll;
      animation-timing-function: linear;
      z-index: -1;
 }
@@ -214,6 +205,11 @@ section h1 {
     font-style: italic;
     margin-left: auto;
     overflow-x: visible;
+}
+
+.challenges .m {
+    background: rgb(247,215,74);
+    background: radial-gradient(circle, rgba(247,215,74,1) 0%, rgba(208,139,37,1) 100%);
 }
 
 .challenges .l {
